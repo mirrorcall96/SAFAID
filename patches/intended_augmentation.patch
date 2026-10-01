@@ -1,0 +1,37 @@
+Optional: run SAFAID with the augmentation values the paper intended (albumentations 2.x argument names).
+The released results were NOT produced with this patch; see 'Notes on the augmentation implementation' in README.md.
+Apply from the repository root:  git apply patches/intended_augmentation.patch
+
+--- a/safaid/train.py
++++ b/safaid/train.py
+@@ -144,11 +144,11 @@
+ 
+ aug_pipeline = A.Compose([
+     A.HorizontalFlip(p=0.5),
+-    A.ImageCompression(quality_lower=30, quality_upper=95, p=0.4),
++    A.ImageCompression(quality_range=(30, 95), p=0.4),
+     A.GaussianBlur(blur_limit=(3, 7), p=0.3),
+-    A.Downscale(scale_min=0.5, scale_max=0.9, p=0.2),
++    A.Downscale(scale_range=(0.5, 0.9), p=0.2),
+     A.RandomBrightnessContrast(brightness_limit=0.1, contrast_limit=0.1, p=0.2),
+-    A.GaussNoise(var_limit=(10, 30), p=0.1),
++    A.GaussNoise(std_range=(10 ** 0.5 / 255, 30 ** 0.5 / 255), p=0.1),  # variance 10-30 on the 0-255 scale
+ ], seed=args.seed)
+ 
+ 
+@@ -212,11 +212,11 @@
+     "lr": LEARNING_RATE, "epochs_schedule": NUM_EPOCHS, "batch_size": BATCH_SIZE,
+     "grad_accum": GRADIENT_ACCUMULATION, "max_seq_length": MAX_SEQ_LENGTH,
+     "optim": "adamw_torch" if args.method == "full" else "adamw_8bit", "lr_scheduler": "cosine", "warmup_ratio": 0.1, "bf16": True,
+-    "augmentation": "Train.ipynb pipeline unchanged (albumentations 1.x arg names)",
++    "augmentation": "intended Train.ipynb values, albumentations 2.x arg names (patches/intended_augmentation.patch)",
+     "effective_augmentation_albumentations_2.0.8": {
+-        "HorizontalFlip": "p=0.5", "ImageCompression": "quality_range=(99,100) default, p=0.4",
+-        "GaussianBlur": "blur_limit=(3,7), p=0.3", "Downscale": "scale_range=(0.25,0.25) default, p=0.2",
+-        "RandomBrightnessContrast": "0.1/0.1, p=0.2", "GaussNoise": "std_range=(0.2,0.44) default, p=0.1"},
++        "HorizontalFlip": "p=0.5", "ImageCompression": "quality_range=(30,95), p=0.4",
++        "GaussianBlur": "blur_limit=(3,7), p=0.3", "Downscale": "scale_range=(0.5,0.9), p=0.2",
++        "RandomBrightnessContrast": "0.1/0.1, p=0.2", "GaussNoise": "std_range=(sqrt(10)/255,sqrt(30)/255), p=0.1"},
+     "val_set": "omitted (notebook passed it but never evaluated: no eval_strategy)",
+     "gpu": torch.cuda.get_device_name(0), "gpu_mem_gb": round(torch.cuda.get_device_properties(0).total_memory / 1e9, 1),
+     "versions": {m: _v(m) for m in ["torch", "transformers", "trl", "peft", "accelerate", "unsloth", "unsloth_zoo", "albumentations", "numpy", "PIL"]},

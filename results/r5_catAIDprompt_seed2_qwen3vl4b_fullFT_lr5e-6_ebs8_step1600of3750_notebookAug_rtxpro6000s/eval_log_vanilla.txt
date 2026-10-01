@@ -1,0 +1,54 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.1.2: Fast Qwen3_Vl patching. Transformers: 4.57.3.
+   \\   /|    NVIDIA RTX PRO 6000 Blackwell Server Edition. Num GPUs = 1. Max memory: 94.971 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.9.1+cu128. CUDA: 12.0. CUDA Toolkit: 12.8. Triton: 3.5.1
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.33.post2. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.70it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.80it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.79it/s]
+BigGAN: 4000 images in 91s
+CRN: 12764 images in 448s
+CycleGAN: 2642 images in 49s
+DeepFakes: 5405 images in 118s
+GauGAN: 10000 images in 185s
+IMLE: 12764 images in 422s
+ProGAN: 8000 images in 153s
+StarGAN: 3998 images in 78s
+StyleGAN: 11982 images in 367s
+LDM (CFG): 1000 images in 29s
+LDM (100): 1000 images in 25s
+Glide (100-27): 1000 images in 21s
+OOM on real pool for ADM only: retry with batch 64
+OOM on real pool for ADM only: retry with batch 64
+real pool for ADM only: 1000 images in 197s
+LDM (200): 1000 images in 28s
+ADM: 1000 images in 20s
+DALL-E: 1000 images in 20s
+Glide (50-27): 1000 images in 20s
+real pool for all LDM/Glide/DALL-E rows: 1000 images in 32s
+Glide (100-10): 1000 images in 21s
+SAN: 438 images in 64s
+SITD: 360 images in 1922s
+{
+ "ProGAN": 97.54,
+ "CycleGAN": 91.33,
+ "BigGAN": 87.3,
+ "StyleGAN": 79.75,
+ "GauGAN": 96.2,
+ "SAN": 83.79,
+ "StarGAN": 85.47,
+ "DeepFakes": 70.49,
+ "SITD": 84.72,
+ "CRN": 98.64,
+ "IMLE": 97.61,
+ "ADM": 82.2,
+ "LDM (200)": 89.6,
+ "LDM (CFG)": 69.75,
+ "LDM (100)": 90.65,
+ "Glide (100-27)": 97.15,
+ "Glide (50-27)": 97.0,
+ "Glide (100-10)": 97.35,
+ "DALL-E": 89.65
+}
+AVERAGE_19 88.75

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# data, runs and models (large; fetched or produced by the scripts)
+data/
+runs/
+runs_synced/
+models/
+logs/
+*.safetensors
+*.bin
+unsloth_compiled_cache/
+
+# full zip listings written by manifests/scripts (regenerate them; 1-90 MB each)
+manifests/*_listing.json
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

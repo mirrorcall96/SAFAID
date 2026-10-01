@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 Mohammad Alhadidi and Rawan Ghnemat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Third-party data and models (not covered by the MIT license above)
+
+The MIT license covers the code in this repository. The datasets and models it
+downloads keep their own licenses and are not redistributed here:
+
+  - CNNDetection / ForenSynths (Wang et al., CVPR 2020; ProGAN training set and
+    CNN_synth_testset): CC BY-NC-SA 4.0 (non-commercial, share-alike).
+    https://huggingface.co/datasets/sywang/CNNDetection
+  - UniverDiffu test set, diffusion_datasets.zip (Ojha et al., CVPR 2023):
+    distributed by https://github.com/WisconsinAIVision/UniversalFakeDetect;
+    its real images come from LAION and ImageNet and are subject to their terms.
+  - Qwen3-VL-4B-Instruct (base model): Apache License 2.0.
+
+The files in manifests/ list names, sizes and checksums of images in these
+datasets. The images themselves remain under the datasets' original licenses.

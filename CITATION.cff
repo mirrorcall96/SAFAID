@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper as below."
+title: "SAFAID: Selective Augmentation for Fake AI-Generated Image Detection"
+type: software
+license: MIT
+authors:
+  - given-names: Mohammad
+    family-names: Alhadidi
+    email: moh20259001@std.psut.edu.jo
+    affiliation: "King Hussein School of Computing Sciences, Princess Sumaya University for Technology, Amman, Jordan"
+  - given-names: Rawan
+    family-names: Ghnemat
+    email: r.ghnemat@psut.edu.jo
+    affiliation: "King Hussein School of Computing Sciences, Princess Sumaya University for Technology, Amman, Jordan"
+keywords:
+  - AI-generated image detection
+  - vision-language models
+  - deepfake detection
+  - data augmentation
+  - digital forensics
+preferred-citation:
+  type: article
+  title: "SAFAID: Selective Augmentation for Fake AI-Generated Image Detection"
+  authors:
+    - given-names: Mohammad
+      family-names: Alhadidi
+    - given-names: Rawan
+      family-names: Ghnemat
+  journal: "International Journal of Computer Vision"
+  status: submitted
