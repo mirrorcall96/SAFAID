@@ -1,10 +1,6 @@
+<p align="center"><img src="assets/cover.png" alt="SAFAID: Selective Augmentation for Fake AI-Generated Image Detection. This image is under investigation. One forensic question and no category labels: a fine-tuned 4B vision-language model that tells real photographs from AI-generated images. 89.52% average accuracy on 19 generators, 0 category labels, 1 GPU." width="100%"></p>
+
 <div align="center">
-
-# SAFAID
-
-### Selective Augmentation for Fake AI-Generated Image Detection
-
-**Category-free detection of AI-generated images with a fully fine-tuned 4B vision–language model, trained on a single GPU.**
 
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](requirements.txt)
@@ -12,6 +8,7 @@
 [![Base model: Qwen3-VL-4B](https://img.shields.io/badge/base-Qwen3--VL--4B--Instruct-6f42c1.svg)](https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct)
 [![Paper: IJCV, under revision](https://img.shields.io/badge/paper-IJCV%20(under%20revision)-2ea44f.svg)](#citation)
 
+**SAFAID: Selective Augmentation for Fake AI-Generated Image Detection**<br>
 Mohammad Alhadidi · Rawan Ghnemat<br>
 King Hussein School of Computing Sciences, Princess Sumaya University for Technology, Amman, Jordan
 
@@ -381,8 +378,8 @@ scripts/
 contamination/          post-cutoff contamination test (new generators + recent real photos), pending
 manifests/              training/val subsets (+ SHA256), evaluation member list, zip checksums, selection scripts
 results/                per-run records of the ten runs, RESULTS.md, predictions.zip
-assets/                 figures, charts, animated pipeline and poster (make_charts.py regenerates the charts,
-                        src/make_animation.sh the animation)
+assets/                 cover, figures, charts, animated pipeline and poster (make_charts.py regenerates the charts,
+                        src/make_animation.sh the animation, src/build_cover.sh the cover)
 poster/                 poster source: make_poster.py (HTML page from results/) and build.sh (PDF and PNG)
 patches/                intended_augmentation.patch
 env/pip_freeze.txt      full environment of the training machine
