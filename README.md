@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/cover.png" alt="SAFAID: Selective Augmentation for Fake AI-Generated Image Detection. This image is under investigation. One forensic question and no category labels: a fine-tuned 4B vision-language model that tells real photographs from AI-generated images. 89.52% average accuracy on 19 generators, 0 category labels, 1 GPU." width="100%"></p>
+<p align="center"><img src="assets/cover.png" alt="SAFAID, with the letters AI built from tiles. Selective Augmentation for Fake AI-Generated Image Detection: one forensic question and no category labels, a fine-tuned 4B vision-language model that tells real photographs from AI-generated images. Mohammad Alhadidi and Rawan Ghnemat, Princess Sumaya University for Technology. 89.52% average accuracy on 19 generators, 0 category labels, 1 GPU. QR code: github.com/mirrorcall96/SAFAID." width="100%"></p>
 
 <div align="center">
 
